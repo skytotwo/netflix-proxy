@@ -9,10 +9,10 @@ find a Debian or Ubuntu box with root on a clean public IP and run:
 	  && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
 	  && mkdir -p ~/netflix-proxy\
 	  && cd ~/netflix-proxy\
-	  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
+	  && curl -fsSL https://github.com/skytotwo/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
 	  && ./build.sh
 
-See the [**Wiki**](https://github.com/ab77/netflix-proxy/wiki) page(s) for some common troubleshooting ideas.
+See the [**Wiki**](https://github.com/skytotwo/netflix-proxy/wiki) page(s) for some common troubleshooting ideas.
 
 ... or subscribe to [Unzoner](http://unzoner.com) VPN service to un-block:
 
@@ -51,7 +51,7 @@ The following paragraphs show how to get this solution up and running with a few
 ```
 mkdir -p ~/netflix-proxy\
   && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
+  && curl -fsSL https://github.com/skytotwo/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
   && ./build.sh
 ```
 
@@ -63,7 +63,7 @@ mkdir -p ~/netflix-proxy\
 ### authorising additional IPs
 If you want to share your system with friends and family, you can authorise their home IP address(s) using the `netflix-proxy` admin site, located at `http://<ipaddr>:8080/`, where `ipaddr` is the public IP address of your VPS. Login using `admin` account with the password you recorded during the build. If you've forgotten your admin credentials, [reset](https://github.com/ab77/netflix-proxy/wiki/Changing-Admin-Password-For-Auth-Version).
 
-[![](https://raw.githubusercontent.com/ab77/netflix-proxy/master/static/admin.png)](https://raw.githubusercontent.com/ab77/netflix-proxy/master/static/admin.png)
+[![](https://raw.githubusercontent.com/skytotwo/netflix-proxy/master/static/admin.png)](https://raw.githubusercontent.com/skytotwo/netflix-proxy/master/static/admin.png)
 
 The `admin` account does not restrict the entry or removal of IPs. If you want to restrict the entry of IPs to the current client IP using an automatically populated drop-down, create a standard user account using the `account-creator.sh` script located in the `auth` directory, which will prompt you for the input and create the user account.
 
@@ -142,7 +142,7 @@ apt-get update\
   && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
   && mkdir -p ~/netflix-proxy\
   && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
+  && curl -fsSL https://github.com/skytotwo/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
   && ./build.sh
 ```
 
@@ -151,7 +151,7 @@ apt-get update\
 6. Finally, enjoy `Netflix` and others out of region.
 7. Enjoy or try `#netflix-proxy` on [freenode](https://webchat.freenode.net/?channels=netflix-proxy) for help.
 
-[![](https://raw.githubusercontent.com/ab77/netflix-proxy/master/static/kamatera.png)](https://www.kamatera.com/express/compute/?tcampaign=antonbelodedenko&HT=17)
+[![](https://raw.githubusercontent.com/skytotwo/netflix-proxy/master/static/kamatera.png)](https://www.kamatera.com/express/compute/?tcampaign=antonbelodedenko&HT=17)
 
 (Netflix is **blocked**[[n16]](#footnotes)) The following is based on a standard Ubuntu image provided by `Kamatera`.
 
@@ -165,7 +165,7 @@ apt-get update\
   && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
   && mkdir -p ~/netflix-proxy\
   && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
+  && curl -fsSL https://github.com/skytotwo/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
   | tar x --strip-components=1\
   && ./build.sh
 ```
@@ -189,7 +189,7 @@ apt-get update\
   && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
   && mkdir -p ~/netflix-proxy\
   && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
+  && curl -fsSL https://github.com/skytotwo/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
   && ./build.sh
 ```
 
@@ -212,7 +212,7 @@ apt-get update\
   && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
   && mkdir -p ~/netflix-proxy\
   && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
+  && curl -fsSL https://github.com/skytotwo/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
   && ./build.sh
 ```
 
@@ -221,7 +221,7 @@ apt-get update\
 6. Finally, enjoy `Netflix` and others out of region.
 7. Enjoy or try `#netflix-proxy` on [freenode](https://webchat.freenode.net/?channels=netflix-proxy) for help.
 
-[![](https://raw.githubusercontent.com/ab77/netflix-proxy/master/static/dreamhost.png)](http://www.dreamhost.com/r.cgi?2124700)
+[![](https://raw.githubusercontent.com/skytotwo/netflix-proxy/master/static/dreamhost.png)](http://www.dreamhost.com/r.cgi?2124700)
 
 **(untested)** The following is based on a standard Ubuntu image provided by `DreamHost`, but should work on any Linux distribution **without** Docker installed and running under **non-root** user (e.g. `Amazon Web Services`[[n13]](#footnotes)).
 
@@ -238,7 +238,7 @@ sudo apt-get update\
   && sudo usermod -aG docker $(whoami | awk '{print $1}')\
   && mkdir -p ~/netflix-proxy\
   && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
+  && curl -fsSL https://github.com/skytotwo/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
   && ./build.sh
 ```
 
@@ -247,7 +247,7 @@ sudo apt-get update\
 8. Finally, enjoy `Netflix` and others out of region.
 9. Enjoy or try `#netflix-proxy` on [freenode](https://webchat.freenode.net/?channels=netflix-proxy) for help.
 
-[![](https://raw.githubusercontent.com/ab77/netflix-proxy/master/static/gandi.png)](https://www.gandi.net/hosting/iaas/buy)
+[![](https://raw.githubusercontent.com/skytotwo/netflix-proxy/master/static/gandi.png)](https://www.gandi.net/hosting/iaas/buy)
 
 The following is based on Ubuntu image provided by `Gandi` using` root` login with SSH key only (no password). For default non-root `admin` login, adjust step 6 to use `sudo` where nesessary.
 
@@ -260,7 +260,7 @@ apt-get update\
   && curl -fsSL https://get.docker.com/ | sh || apt-get -y install docker.io\
   && mkdir -p ~/netflix-proxy\
   && cd ~/netflix-proxy\
-  && curl -fsSL https://github.com/ab77/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
+  && curl -fsSL https://github.com/skytotwo/netflix-proxy/archive/latest.tar.gz | gunzip - | tar x --strip-components=1\
   && ./build.sh
 ```
 
