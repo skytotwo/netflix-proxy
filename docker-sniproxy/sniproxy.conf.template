@@ -1,0 +1,14 @@
+user daemon
+pidfile /var/tmp/sniproxy.pid
+
+listener 80 {
+    proto http
+}
+
+listener 443 {
+    proto tls
+}
+
+table {
+    .* *
+}
