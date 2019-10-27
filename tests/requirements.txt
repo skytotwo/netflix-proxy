@@ -1,0 +1,11 @@
+requests[security]
+urllib3[secure]
+termcolor
+dnspython
+pyOpenSSL
+idna
+certifi
+cryptography
+ndg-httpsclient
+pyasn1
+selenium

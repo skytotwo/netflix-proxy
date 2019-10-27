@@ -1,0 +1,12 @@
+[Unit]
+Description=netflix-proxy admin service
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+WorkingDirectory={{CWD}}/auth
+ExecStart=/bin/bash -c '. {{CWD}}/venv/bin/activate && {{CWD}}/venv/bin/python auth.py 43867'
+
+[Install]
+WantedBy=multi-user.target
