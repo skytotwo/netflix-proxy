@@ -1,5 +1,0 @@
-bind-dynamic
-bogus-priv
-domain-needed
-log-facility=-
-local-ttl=60
